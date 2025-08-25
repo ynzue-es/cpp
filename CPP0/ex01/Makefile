@@ -6,7 +6,7 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 19:55:20 by yannis            #+#    #+#              #
-#    Updated: 2025/07/26 20:05:07 by yannis           ###   ########.fr        #
+#    Updated: 2025/08/24 16:16:46 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = phonebook
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-
 OBJ_DIR = obj/
 INC_DIR = include/
 
