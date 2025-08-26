@@ -6,7 +6,7 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/26 19:55:20 by yannis            #+#    #+#              #
-#    Updated: 2025/08/24 16:16:46 by yannis           ###   ########.fr        #
+#    Updated: 2025/08/26 16:42:53 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS =  PhoneBook/PhoneBook.cpp \
-        main.cpp
+SRCS =  src/Contact.class.cpp \
+		src/PhoneBook.class.cpp \
+        src/main.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
 

@@ -6,20 +6,16 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:50:25 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/25 17:58:10 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/26 16:46:11 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include <iostream>
 
-Contact::Contact() {
-    std::cout << "Contact create" << std::endl;
-}
+Contact::Contact() {}
 
-Contact::~Contact() {
-    std::cout << "Contact create" << std::endl;
-}
+Contact::~Contact() {}
 
 void Contact::setFirstName(const std::string& firstName) {
     _firstName = firstName;

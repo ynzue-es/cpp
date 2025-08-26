@@ -6,10 +6,12 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:40:30 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/25 19:18:00 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/26 17:26:44 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 #include "Contact.hpp"
 
 class PhoneBook
@@ -18,7 +20,7 @@ class PhoneBook
         Contact _contacts[8];
         int     _countContacts;
         
-        void _filedInput(const std::string& fieldName, 
+        int _filedInput(const std::string& fieldName, 
                         Contact& contact, 
                         void (Contact::*setter)(const std::string&));
     
@@ -29,3 +31,5 @@ class PhoneBook
         void add();
         void search();
 };
+
+#endif

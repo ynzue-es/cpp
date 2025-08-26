@@ -6,12 +6,13 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:50:22 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/25 17:58:29 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/26 08:31:01 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
+#include <iostream>
 
 class Contact
 {
