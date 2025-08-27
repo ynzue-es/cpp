@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:50:22 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/26 08:31:01 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/27 10:14:50 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,12 @@ class Contact
         Contact();
         ~Contact();
 
-        // setter
         void setFirstName(const std::string& firstName);
         void setLastName(const std::string& lastName);
         void setNickName(const std::string& nickName);
         void setPhoneNumber(const std::string& phoneNumber);
         void setDarkestSecret(const std::string& darkestSecret);
-        
-        // getter
+
         std::string getFirstName() const;
         std::string getLastName() const;
         std::string getNickName() const;
