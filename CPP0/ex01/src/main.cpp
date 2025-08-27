@@ -6,13 +6,14 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:47:07 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/26 17:03:15 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/27 08:31:57 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 #include <csignal>
+#include <cstdlib>
 #include "PhoneBook.hpp"
 
 void signalHandler(int signum) {

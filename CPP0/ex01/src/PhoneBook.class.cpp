@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:49:54 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/26 18:07:30 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/27 09:22:04 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdlib>
 
 PhoneBook::PhoneBook() : _countContacts(0) {};
 PhoneBook::~PhoneBook() {};
@@ -114,24 +115,64 @@ void PhoneBook::add() {
     }
 }
 
+std::string formatColumn(const std::string& str, size_t width = 10) {
+    if (str.length() > width) {
+        return str.substr(0, width - 1) + ".";
+    } else {
+        return str;
+    }
+}
+
+bool isNumber(const std::string& str) {
+    if (str.empty())
+        return false;
+
+    for (size_t i = 0; i < str.length(); i++) {
+        if (!std::isdigit(str[i]))
+            return false;
+    }
+    return true;
+}
+
 void PhoneBook::search()
 {
+    std::cout << "┌──────────┬──────────┬──────────┬──────────┐" << std::endl;
     std::cout << "|" << std::setw(10) << "Index"
                 << "|" << std::setw(10) << "First Name"
                 << "|" << std::setw(10) << "Last Name"
                 << "|" << std::setw(10) << "Nickmame"
-                << "|" << std::setw(10) <<  "Phone Num."
-                << "|" << std::setw(10) << "Secret"
-                << "|" << std::endl
-                << " __________ __________ __________ __________ __________ __________ " 
-                << std::endl;
+                << "|" << std::endl;
+    std::cout << "├──────────┼──────────┼──────────┼──────────┤" << std::endl;
     for (int i = 0; i < _countContacts; i++) {
-        std::cout << "|" << std::setw(10) << std::to_string(i)
-                << "|" << std::setw(10) << _contacts[i].getFirstName()
-                << "|" << std::setw(10) << _contacts[i].getLastName()
-                << "|" << std::setw(10) << _contacts[i].getNickName()
-                << "|" << std::setw(10) << _contacts[i].getPhoneNumber()
-                << "|" << std::setw(10) << _contacts[i].getDarkestSecret()
+        std::cout << "|" << std::setw(10) << i
+                << "|" << std::setw(10) << formatColumn(_contacts[i].getFirstName())
+                << "|" << std::setw(10) << formatColumn(_contacts[i].getLastName())
+                << "|" << std::setw(10) << formatColumn(_contacts[i].getNickName())
                 << "|" << std::endl;
     }
+    std::string input;
+    if (_countContacts > 0)
+    {
+        std::cout << "Put user index to display : ";
+        std::getline(std::cin, input);
+    }
+    else
+    {
+        std::cout << "Your phonebook is empty..." << std::endl;
+        return;
+    }
+    if (!isNumber(input)) {
+        std::cout << "❌ You can only put index..." << std::endl;
+        return;
+    }
+    int index = std::atoi(input.c_str());
+    if (index < 0 || index >= _countContacts) {
+        std::cout << "❌ This index don't exist..." << std::endl;
+        return;
+    }
+    std::cout << "|" << std::setw(10) << index
+                << "|" << std::setw(10) << formatColumn(_contacts[index].getFirstName())
+                << "|" << std::setw(10) << formatColumn(_contacts[index].getLastName())
+                << "|" << std::setw(10) << formatColumn(_contacts[index].getNickName())
+                << "|" << std::endl;
 }
