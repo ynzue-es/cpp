@@ -6,7 +6,7 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/27 15:23:51 by yannis            #+#    #+#              #
-#    Updated: 2025/08/27 15:24:29 by yannis           ###   ########.fr        #
+#    Updated: 2025/08/27 20:16:37 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ OBJ_DIR = obj/
 INC_DIR = include/
 
 SRCS =  src/Zombie.class.cpp \
-		src/newZombie.cpp \
-		src/randomChump.cpp \
+		src/zombieHorde.cpp \
         src/main.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
