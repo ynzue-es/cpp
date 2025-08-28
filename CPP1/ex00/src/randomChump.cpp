@@ -6,11 +6,11 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 14:59:39 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/27 15:39:38 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/27 21:23:45 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "../include/Zombie.hpp"
 #include <string>
 #include <iostream>
 

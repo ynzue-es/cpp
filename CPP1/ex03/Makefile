@@ -5,19 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/08/27 21:26:30 by yannis            #+#    #+#              #
-#    Updated: 2025/08/28 07:40:40 by yannis           ###   ########.fr        #
+#    Created: 2025/08/28 07:39:50 by yannis            #+#    #+#              #
+#    Updated: 2025/08/28 07:44:16 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = human
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS = main.cpp
+SRCS = 	src/Weapon.class.cpp \
+		src/HumanA.class.cpp \
+		src/HumanB.class.cpp \
+		src/main.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
 

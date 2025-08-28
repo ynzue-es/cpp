@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 14:46:48 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/27 21:24:03 by yannis           ###   ########.fr       */
+/*   Created: 2025/08/27 21:44:21 by yannis            #+#    #+#             */
+/*   Updated: 2025/08/28 07:52:07 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Zombie.hpp"
+#ifndef WEAPON_H
+#define WEAPON_H
 
-int main() {
-    randomChump("Yannis");
-    
-    Zombie *zombie1 = newZombie("Helias");
-    zombie1->announce();
-    delete zombie1;
+#include <string>
 
-    return (0);
-}
+class Weapon
+{
+    private:
+        std::string _type;
+    public:
+        Weapon(std::string const & type);
+        ~Weapon();
+
+        std::string getType();
+        void setType(std::string const & type);
+};
+
+#endif

@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 14:46:48 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/27 21:24:03 by yannis           ###   ########.fr       */
+/*   Created: 2025/08/27 21:44:27 by yannis            #+#    #+#             */
+/*   Updated: 2025/08/28 07:49:24 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Zombie.hpp"
+#ifndef HUMAN_A_HPP
+#define HUMAN_A_HPP
 
-int main() {
-    randomChump("Yannis");
-    
-    Zombie *zombie1 = newZombie("Helias");
-    zombie1->announce();
-    delete zombie1;
+#include "Weapon.hpp"
+#include <string>
 
-    return (0);
-}
+class HumanA
+{
+    private:
+        std::string _name;
+        Weapon& _weapon;
+        
+    public:
+        HumanA(std::string const & name, Weapon & weapon);
+        ~HumanA();
+
+        void attack();
+};
+
+#endif
