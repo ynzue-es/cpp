@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:16 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 16:20:36 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/29 20:40:21 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 
-// cette classe permet de créer un float à partir d'int
 class Fixed
 {
     private:
@@ -40,6 +39,12 @@ class Fixed
         bool operator>=(Fixed const & rhs) const;
         bool operator==(Fixed const & rhs) const;
         bool operator!=(Fixed const & rhs) const;
+
+        // arithmetique
+        Fixed Fixed::operator+(Fixed const & rhs) const;
+        Fixed Fixed::operator-(Fixed const & rhs) const;
+        Fixed Fixed::operator*(Fixed const & rhs) const;
+        Fixed Fixed::operator/(Fixed const & rhs) const;
         
         // incrémentation
         Fixed& operator++();
@@ -54,8 +59,8 @@ class Fixed
 
         static Fixed& min(Fixed & f1, Fixed & f2);
         static Fixed& max(Fixed & f1, Fixed & f2);
-        static Fixed& min(Fixed const & f1, Fixed const & f2);
-        static Fixed& max(Fixed const & f1, Fixed const & f2);
+        static Fixed const & min(Fixed const & f1, Fixed const & f2);
+        static Fixed const & max(Fixed const & f1, Fixed const & f2);
 };
 
 std::ostream & operator<<(std::ostream & o, Fixed const & rhs);
