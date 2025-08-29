@@ -6,20 +6,13 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:38 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 11:34:15 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/29 11:33:06 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../include/Fixed.hpp"
+#include "Fixed.hpp"
 
 int main( void ) {
-    Fixed a;
-    Fixed b( a );
-    Fixed c;
-    c = b;
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
-    return (0);
+
 }
