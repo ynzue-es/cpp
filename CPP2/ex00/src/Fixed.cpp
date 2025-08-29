@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:35 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 11:34:12 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/29 13:15:06 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Fixed::Fixed( void ) {
 
 Fixed::Fixed( Fixed const & src ) {
     std::cout << "Copy constructor called" << std::endl;
-    _rawBits = src._rawBits;
+    *this = src;
     return;
 }
 

@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:35 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 11:50:04 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/29 13:37:31 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Fixed::Fixed( float const f ) {
 
 Fixed::Fixed( Fixed const & src ) {
     std::cout << "Copy constructor called" << std::endl;
-    _rawBits = src._rawBits;
+    *this = src;
     return;
 }
 
@@ -58,9 +58,14 @@ void Fixed::setRawBits( int const raw ) {
 }
 
 int Fixed::toInt( void ) const {
-    
+    return _rawBits >> _fractionalBits;
 }
 
 float Fixed::toFloat( void ) const {
-    
+    return (float)_rawBits / (1 << _fractionalBits);
+}
+
+std::ostream & operator<<(std::ostream & o, Fixed const & rhs) {
+    o << rhs.toFloat();
+    return o;
 }
