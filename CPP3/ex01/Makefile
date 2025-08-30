@@ -6,7 +6,7 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/30 09:52:18 by yannis            #+#    #+#              #
-#    Updated: 2025/08/30 09:52:54 by yannis           ###   ########.fr        #
+#    Updated: 2025/08/30 10:56:42 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ OBJ_DIR = obj/
 INC_DIR = include/
 
 SRCS = 	src/ClapTrap.cpp \
+		src/ScavTrap.cpp \
 		src/main.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
