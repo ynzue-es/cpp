@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:16 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 20:40:21 by yannis           ###   ########.fr       */
+/*   Updated: 2025/08/30 08:11:20 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ class Fixed
         bool operator!=(Fixed const & rhs) const;
 
         // arithmetique
-        Fixed Fixed::operator+(Fixed const & rhs) const;
-        Fixed Fixed::operator-(Fixed const & rhs) const;
-        Fixed Fixed::operator*(Fixed const & rhs) const;
-        Fixed Fixed::operator/(Fixed const & rhs) const;
+        Fixed operator+(Fixed const & rhs) const;
+        Fixed operator-(Fixed const & rhs) const;
+        Fixed operator*(Fixed const & rhs) const;
+        Fixed operator/(Fixed const & rhs) const;
         
         // incrémentation
         Fixed& operator++();
