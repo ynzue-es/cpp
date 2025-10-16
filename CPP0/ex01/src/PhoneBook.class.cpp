@@ -83,6 +83,7 @@ void PhoneBook::add() {
     bool valid_phone_nb = false;
     bool valid_first_name = false;
     bool valid_last_name = false;
+    static int older = 0;
     
     while (!valid_first_name)
     {
@@ -110,8 +111,9 @@ void PhoneBook::add() {
         _countContacts++;
     }
     else {
-        std::cout << "Phonebook full, it will replace the older.";
-        _contacts[0] = contact;
+        std::cout << "Phonebook full, it will replace the older." << std::endl;
+        _contacts[older] = contact;
+        older = (older + 1) % 8;
     }
 }
 
@@ -144,7 +146,7 @@ void PhoneBook::search()
                 << "|" << std::endl;
     std::cout << "├──────────┼──────────┼──────────┼──────────┤" << std::endl;
     for (int i = 0; i < _countContacts; i++) {
-        std::cout << "|" << std::setw(10) << i
+        std::cout << "|" << std::setw(10) << i + 1
                 << "|" << std::setw(10) << formatColumn(_contacts[i].getFirstName())
                 << "|" << std::setw(10) << formatColumn(_contacts[i].getLastName())
                 << "|" << std::setw(10) << formatColumn(_contacts[i].getNickName())
@@ -165,12 +167,12 @@ void PhoneBook::search()
         std::cout << "❌ You can only put index..." << std::endl;
         return;
     }
-    int index = std::atoi(input.c_str());
+    int index = std::atoi(input.c_str()) - 1;
     if (index < 0 || index >= _countContacts) {
         std::cout << "❌ This index don't exist..." << std::endl;
         return;
     }
-    std::cout << "|" << std::setw(10) << index
+    std::cout << "|" << std::setw(10) << index + 1
                 << "|" << std::setw(10) << formatColumn(_contacts[index].getFirstName())
                 << "|" << std::setw(10) << formatColumn(_contacts[index].getLastName())
                 << "|" << std::setw(10) << formatColumn(_contacts[index].getNickName())
