@@ -13,7 +13,7 @@
 NAME = megaphone
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 
 SRC_DIR = src/
 OBJ_DIR = obj/
@@ -22,6 +22,7 @@ INC_DIR = include/
 SRCS = megaphone.cpp
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 OBJ = $(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
+DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)
 
@@ -29,7 +30,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) Makefile
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
@@ -39,5 +40,7 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+-include $(DEPS)
 
 .PHONY: all clean fclean re
