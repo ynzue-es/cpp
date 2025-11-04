@@ -58,9 +58,15 @@ int PhoneBook::_filedInput(const std::string& fieldName,
 {
     std::string input;
     std::cout << "Set " << fieldName << " : ";
-    std::getline(std::cin, input);
+     if (!std::getline(std::cin, input)) {
+        std::cout << "\nBye 👋" << std::endl;
+        exit(1);
+    }
     if (input.empty())
-        std::cout << "Field can't be empty";
+    {
+        std::cout << "Field can't be empty" << std::endl;
+        return (1);
+    }
     else
     {
         if (fieldName == "first name" || fieldName == "last name")
@@ -83,6 +89,8 @@ void PhoneBook::add() {
     bool valid_phone_nb = false;
     bool valid_first_name = false;
     bool valid_last_name = false;
+    bool valid_nickname = false;
+    bool valid_secret = false;
     static int older = 0;
     
     while (!valid_first_name)
@@ -97,15 +105,24 @@ void PhoneBook::add() {
             continue;
         valid_last_name = true;
     }
-    _filedInput("nickname", contact, &Contact::setNickName);
+    while (!valid_nickname)
+    {
+        if (_filedInput("nickname", contact, &Contact::setNickName))
+            continue;
+        valid_nickname = true;
+    }
     while (!valid_phone_nb)
     {
         if (_filedInput("phone number", contact, &Contact::setPhoneNumber))
             continue;
         valid_phone_nb = true;
     }
-    _filedInput("darkest secret", contact, &Contact::setDarkestSecret);
-
+    while (!valid_secret)
+    {
+        if (_filedInput("darkest secret", contact, &Contact::setDarkestSecret))
+            continue;
+        valid_secret = true;
+    }
     if (_countContacts < 8) {
         _contacts[_countContacts] = contact;
         _countContacts++;
@@ -176,5 +193,7 @@ void PhoneBook::search()
                 << "|" << std::setw(10) << formatColumn(_contacts[index].getFirstName())
                 << "|" << std::setw(10) << formatColumn(_contacts[index].getLastName())
                 << "|" << std::setw(10) << formatColumn(_contacts[index].getNickName())
+                << "|" << std::setw(10) << formatColumn(_contacts[index].getPhoneNumber())
+                << "|" << std::setw(10) << formatColumn(_contacts[index].getDarkestSecret())
                 << "|" << std::endl;
 }

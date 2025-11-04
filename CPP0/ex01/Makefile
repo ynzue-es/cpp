@@ -17,8 +17,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS =  src/Contact.class.cpp \
-		src/PhoneBook.class.cpp \
+SRCS =  src/Contact.cpp \
+		src/PhoneBook.cpp \
         src/main.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
