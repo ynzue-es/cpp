@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS = 	src/Harl.class.cpp \
+SRCS = 	src/Harl.cpp \
 		src/main.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)

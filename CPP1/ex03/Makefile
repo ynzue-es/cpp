@@ -17,9 +17,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS = 	src/Weapon.class.cpp \
-		src/HumanA.class.cpp \
-		src/HumanB.class.cpp \
+SRCS = 	src/Weapon.cpp \
+		src/HumanA.cpp \
+		src/HumanB.cpp \
 		src/main.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)

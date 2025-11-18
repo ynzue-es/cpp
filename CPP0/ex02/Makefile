@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS =  src/Account.class.cpp \
+SRCS =  src/Account.cpp \
         src/tests.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)

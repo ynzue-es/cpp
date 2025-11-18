@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS =  src/Zombie.class.cpp \
+SRCS =  src/Zombie.cpp \
 		src/zombieHorde.cpp \
         src/main.cpp
 
