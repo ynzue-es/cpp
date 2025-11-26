@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.class.hpp"
+#include "Harl.hpp"
 #include <string>
 #include <iostream>
 
@@ -51,13 +51,10 @@ void Harl::complain( std::string level ) {
     switch (i) {
         case 0:
             _debug();
-            /* fall through */
         case 1:
             _info();
-            /* fall through */
         case 2:
             _warning();
-            /* fall through */
         case 3:
             _error();
             break;

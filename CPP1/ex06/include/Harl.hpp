@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.class.hpp                                     :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/28 09:50:03 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/28 10:54:35 by yannis           ###   ########.fr       */
+/*   Created: 2025/11/26 11:27:46 by ynzue-es          #+#    #+#             */
+/*   Updated: 2025/11/26 11:27:48 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_CLASS_HPP
-#define HARL_CLASS_HPP
+#ifndef HARL_HPP
+#define HARL_HPP
 
 #include <string>
 

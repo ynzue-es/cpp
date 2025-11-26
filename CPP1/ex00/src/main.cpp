@@ -13,9 +13,9 @@
 #include "../include/Zombie.hpp"
 
 int main() {
-    randomChump("Yannis");
+    randomChump("Zombie1");
     
-    Zombie *zombie1 = newZombie("Helias");
+    Zombie *zombie1 = newZombie("Zombie2");
     zombie1->announce();
     delete zombie1;
 

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.class.cpp                                     :+:      :+:    :+:   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/28 09:41:30 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/28 10:55:12 by yannis           ###   ########.fr       */
+/*   Created: 2025/11/26 11:27:25 by ynzue-es          #+#    #+#             */
+/*   Updated: 2025/11/26 11:27:27 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_CLASS_HPP
-#define HARL_CLASS_HPP
+#ifndef HARL_HPP
+#define HARL_HPP
 
-#include "Harl.class.hpp"
+#include "Harl.hpp"
 #include <string>
 #include <iostream>
 

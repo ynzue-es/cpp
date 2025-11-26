@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "../include/Harl.class.hpp"
+#include "../include/Harl.hpp"
 
 int main(int argc, char **argv) {
     if (argc != 2)

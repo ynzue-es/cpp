@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.class.cpp                                   :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 21:42:28 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/27 22:30:04 by yannis           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:27:01 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Weapon::Weapon(std::string const & type) : _type(type) {};
 Weapon::~Weapon() {};
 
-std::string Weapon::getType() {
+std::string Weapon::getType() const {
     return _type;
 }
 

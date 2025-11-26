@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 09:41:26 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/28 10:55:21 by yannis           ###   ########.fr       */
+/*   Updated: 2025/11/26 11:28:41 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Harl.class.hpp"
+#include "../include/Harl.hpp"
 
 int main() {
     Harl harl;
