@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 08:20:11 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/28 09:34:54 by yannis           ###   ########.fr       */
+/*   Updated: 2025/11/26 13:49:29 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,9 @@ int main(int argc, char** argv) {
     }
 
     std::string filename = argv[1];
-    size_t pos = filename.find_last_of('.');
-    std::string new_filename;
-    if (pos != std::string::npos)
-        new_filename = filename.substr(0, pos) + ".replace";
-    else
-        new_filename = filename + ".replace";
+
+    std::string new_filename = filename + ".replace";
+
     std::ofstream new_file(new_filename.c_str());
     if (!new_file) {
         std::cerr << "Impossible to create " << new_filename << std::endl;
