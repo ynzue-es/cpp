@@ -6,7 +6,7 @@
 /*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 21:44:21 by yannis            #+#    #+#             */
-/*   Updated: 2025/11/26 13:34:34 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/11/28 13:21:52 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Weapon
         Weapon(std::string const & type);
         ~Weapon();
 
-        std::string getType() const;
+        const std::string& getType() const;
         void setType(std::string const & type);
 };
 

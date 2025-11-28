@@ -6,7 +6,7 @@
 /*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 08:20:11 by yannis            #+#    #+#             */
-/*   Updated: 2025/11/26 13:49:29 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/11/28 13:25:20 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,15 @@ int main(int argc, char** argv) {
     }
 
     std::string to_find = argv[2];
-    std::string to_replace = argv[3];    
+    if (to_find.empty())
+        return 1;
+    std::string to_replace = argv[3];
+    if (to_replace.empty())
+        return 1;
+    if (to_find == to_replace) {
+        std::cerr << "No need changes." << std::endl;
+        return 0;
+    }   
     std::string line;
     while (std::getline(file, line)) {
         size_t pos = 0;
