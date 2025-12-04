@@ -6,14 +6,14 @@
 #    By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/28 07:39:50 by yannis            #+#    #+#              #
-#    Updated: 2025/11/28 13:13:24 by ynzue-es         ###   ########.fr        #
+#    Updated: 2025/12/04 11:15:18 by ynzue-es         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = human
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = include/
 

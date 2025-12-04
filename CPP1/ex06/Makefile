@@ -6,14 +6,14 @@
 #    By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/28 09:30:04 by yannis            #+#    #+#              #
-#    Updated: 2025/11/28 13:15:15 by ynzue-es         ###   ########.fr        #
+#    Updated: 2025/12/04 11:15:31 by ynzue-es         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = harlFilter
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = include/
 

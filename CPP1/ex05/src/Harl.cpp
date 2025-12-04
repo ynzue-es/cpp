@@ -6,7 +6,7 @@
 /*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 11:27:25 by ynzue-es          #+#    #+#             */
-/*   Updated: 2025/11/28 13:29:50 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/12/04 11:22:20 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void Harl::_error() {
 }
 
 void Harl::complain( std::string level ) {
-    if (!level)
-        return;
     const std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     void (Harl::*funcs[])() = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
     
