@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 09:02:23 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/30 09:50:18 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/11 10:36:50 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap( std::string const & name ) 
-: _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(10) {
+ClapTrap::ClapTrap( std::string const & name )
+: _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
     std::cout << "ClapTrap constructor called" << std::endl;
 };
 

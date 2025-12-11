@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
+#    By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/01 09:31:14 by yannis            #+#    #+#              #
-#    Updated: 2025/09/01 17:40:45 by yannis           ###   ########.fr        #
+#    Updated: 2025/12/11 10:51:39 by ynzue-es         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = animal
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMP -MD
 OBJ_DIR = obj/
 INC_DIR = include/
 

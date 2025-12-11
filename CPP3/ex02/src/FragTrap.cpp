@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:46:42 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/30 11:54:46 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/11 10:42:30 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/FragTrap.hpp"
 #include <iostream>
 
-FragTrap::FragTrap( std::string const & name ) : ClapTrap(name){
+FragTrap::FragTrap( std::string const & name ) : ClapTrap(name) {
     std::cout << "FragTrap constructor called" << std::endl;
     _hitPoints = 100;
     _energyPoints = 100;
@@ -42,5 +42,5 @@ FragTrap& FragTrap::operator=(FragTrap const & rhs) {
 }
 
 void FragTrap::highFivesGuys() {
-    std::cout << "FragTrap Bob requests a positive high five! 🙌" << std::endl;
+    std::cout << "FragTrap Bob requests a positive high five !" << std::endl;
 }

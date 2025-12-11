@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:16 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 13:38:58 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/09 09:11:32 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 
 #include <iostream>
 
-// cette classe permet de créer un float à partir d'int
 class Fixed
 {
     private:
-
         int                 _rawBits;
         static const int    _fractionalBits = 8; 
         

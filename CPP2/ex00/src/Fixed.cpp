@@ -3,31 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:35 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 13:15:06 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/09 11:50:07 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Fixed.hpp"
 #include <iostream>
 
-Fixed::Fixed( void ) {
+Fixed::Fixed( void ) : _rawBits(0) {
     std::cout << "Default constructor called" << std::endl;
-    _rawBits = 0;
-    return;
 }
 
 Fixed::Fixed( Fixed const & src ) {
     std::cout << "Copy constructor called" << std::endl;
     *this = src;
-    return;
 }
 
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
-    return;
 }
 
 Fixed& Fixed::operator=(Fixed const & rhs) {

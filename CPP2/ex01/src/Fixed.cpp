@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/28 19:35:35 by yannis            #+#    #+#             */
-/*   Updated: 2025/08/29 13:37:31 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/09 11:52:03 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 #include <iostream>
 #include <cmath>
 
-Fixed::Fixed( void ) {
+Fixed::Fixed() : _rawBits(0) {
     std::cout << "Default constructor called" << std::endl;
-    _rawBits = 0;
-    return;
 }
 
 Fixed::Fixed( int const n ) {
+    std::cout << "Int constructor called" << std::endl;
     _rawBits = n << _fractionalBits;
 }
 
@@ -32,12 +31,10 @@ Fixed::Fixed( float const f ) {
 Fixed::Fixed( Fixed const & src ) {
     std::cout << "Copy constructor called" << std::endl;
     *this = src;
-    return;
 }
 
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
-    return;
 }
 
 Fixed& Fixed::operator=(Fixed const & rhs) {
@@ -48,7 +45,6 @@ Fixed& Fixed::operator=(Fixed const & rhs) {
 }
 
 int Fixed::getRawBits( void ) const {
-    std::cout << "getRawBits member function called" << std::endl;
     return _rawBits;
 }
 
