@@ -6,19 +6,19 @@
 #    By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/01 09:31:14 by yannis            #+#    #+#              #
-#    Updated: 2025/12/11 12:36:59 by ynzue-es         ###   ########.fr        #
+#    Updated: 2025/12/12 10:48:13 by ynzue-es         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = animal
+NAME = aanimal
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMP -MD
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = include/
 
 SRCS =  src/Brain.cpp \
-		src/Animal.cpp \
+		src/AAnimal.cpp \
         src/Cat.cpp \
         src/Dog.cpp \
 		src/WrongAnimal.cpp \
@@ -29,7 +29,7 @@ DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)
 
-$(OBJ_DIR)%.o: %.cpp $(INC_DIR)/Animal.hpp $(INC_DIR)/Cat.hpp $(INC_DIR)/Dog.hpp $(INC_DIR)/Brain.hpp
+$(OBJ_DIR)%.o: %.cpp $(INC_DIR)/AAnimal.hpp $(INC_DIR)/Cat.hpp $(INC_DIR)/Dog.hpp $(INC_DIR)/Brain.hpp
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 

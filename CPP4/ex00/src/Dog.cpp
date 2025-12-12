@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:32:55 by yannis            #+#    #+#             */
-/*   Updated: 2025/09/01 16:40:24 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/12 09:38:08 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Dog.hpp"
 #include <iostream>
 
-Dog::Dog() :Animal() {
+Dog::Dog() : Animal() {
     std::cout << "Dog constructor called" << std::endl;
     setType("Dog");
 }

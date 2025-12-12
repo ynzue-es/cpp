@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 16:30:34 by yannis            #+#    #+#             */
-/*   Updated: 2025/09/01 17:45:20 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/12 10:46:39 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Brain
 {
     private:
-        std::string *_ideas[100];
+        std::string _ideas[100];
 
     public:
         Brain();

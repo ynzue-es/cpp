@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:29:19 by yannis            #+#    #+#             */
-/*   Updated: 2025/09/01 16:29:12 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/12 10:19:43 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,27 @@
 
 int main()
 {
-    const Animal* meta = new Animal();
+    const Animal* animal = new Animal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound();
     j->makeSound();
-    meta->makeSound();
+    animal->makeSound();
 
-    const WrongAnimal* metaFake = new WrongAnimal();
-    const WrongAnimal* iFake = new WrongCat();
+    const WrongAnimal* animalFake = new WrongAnimal();
+    const WrongAnimal* catFake = new WrongCat();
     std::cout << i->getType() << " " << std::endl;
-    iFake->makeSound();
-    metaFake->makeSound();
+    catFake->makeSound();
+    animalFake->makeSound();
+
+    delete animal;
+    delete j;
+    delete i;
+
+    delete animalFake;
+    delete catFake;
+    
     return 0;
 }

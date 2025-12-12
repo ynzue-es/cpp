@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 09:25:45 by yannis            #+#    #+#             */
-/*   Updated: 2025/09/01 17:55:32 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/12 09:44:32 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ Animal::Animal() {
     std::cout << "Animal constructor called" << std::endl;
 }
 
-// copie par construction
 Animal::Animal(Animal const & src) {
     std::cout << "Animal copy constructor called" << std::endl;
     *this = src;
@@ -27,7 +26,6 @@ Animal::~Animal() {
     std::cout << "Animal destructor called" << std::endl;
 }
 
-// copy par affectation
 Animal& Animal::operator=(Animal const & rhs) {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &rhs)

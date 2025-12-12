@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 11:04:22 by yannis            #+#    #+#             */
-/*   Updated: 2025/09/01 16:40:42 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/12 10:21:57 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ WrongAnimal::~WrongAnimal() {
 }
 
 WrongAnimal& WrongAnimal::operator=(WrongAnimal const & rhs) {
-    std::cout << "Dog copy constructor called" << std::endl;
+    std::cout << "WrongAnimal copy assignment operator called" << std::endl;
     if (this != &rhs)
         _type = rhs._type;
     return *this;

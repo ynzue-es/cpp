@@ -6,14 +6,14 @@
 #    By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/01 09:31:14 by yannis            #+#    #+#              #
-#    Updated: 2025/12/11 12:35:31 by ynzue-es         ###   ########.fr        #
+#    Updated: 2025/12/12 10:02:42 by ynzue-es         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = animal
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMP -MD
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = include/
 
