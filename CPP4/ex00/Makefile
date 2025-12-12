@@ -6,7 +6,7 @@
 #    By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/01 09:31:14 by yannis            #+#    #+#              #
-#    Updated: 2025/12/11 10:51:39 by ynzue-es         ###   ########.fr        #
+#    Updated: 2025/12/11 12:35:31 by ynzue-es         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,8 @@ SRCS =  src/Animal.cpp \
 		src/WrongAnimal.cpp \
 		src/WrongCat.cpp \
         src/main.cpp
-
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
+DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)
 
@@ -32,7 +32,7 @@ $(OBJ_DIR)%.o: %.cpp $(INC_DIR)/Animal.hpp $(INC_DIR)/Cat.hpp $(INC_DIR)/Dog.hpp
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) Makefile
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
@@ -42,5 +42,7 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+-include $(DEPS)
 
 .PHONY: all clean fclean re
