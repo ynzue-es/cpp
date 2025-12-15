@@ -6,7 +6,7 @@
 /*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 15:44:35 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/15 11:09:43 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/12/15 13:44:44 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class Bureaucrat
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
+
+        void signForm(Form const & form);
         
     class GradeTooHighException : public std::exception
     {

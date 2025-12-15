@@ -6,21 +6,20 @@
 /*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 15:44:37 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/15 11:10:13 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/12/15 13:52:29 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "../includes/Form.hpp"
+#include "../includes/Bureaucrat.hpp"
 #include <stdexcept>
 #include <iostream>
 
-const char* Bureaucrat::GradeTooHighException::what() const throw()
-{
+const char* Bureaucrat::GradeTooHighException::what() const throw() {
     return "Grade is too high";
 }
 
-const char* Bureaucrat::GradeTooLowException::what() const throw()
-{
+const char* Bureaucrat::GradeTooLowException::what() const throw() {
     return "Grade is too low";
 }
 
@@ -57,6 +56,18 @@ void Bureaucrat::decrementGrade() {
     if ((_grade + 1) > 150)
         throw GradeTooLowException();
     _grade += 1;
+}
+
+void Bureaucrat::signForm(Form const & form) {
+    if (form->beSigned(this)) {
+        std::cout << this->_name << "signed" << form;
+    } else {
+        std::cout <<  this->getName() 
+                  << "couldn't sign" 
+                  << form.getName() 
+                  << "because" 
+                  << ""; // recuperer le throw except
+    }
 }
 
 std::ostream & operator<<(std::ostream & o,Bureaucrat const & rhs) {
