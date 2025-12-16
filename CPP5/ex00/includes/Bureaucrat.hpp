@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 15:44:35 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/15 11:09:43 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/12/16 01:36:18 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
 #include <string>
 #include <iostream>
@@ -43,3 +46,5 @@ class Bureaucrat
 };
 
 std::ostream & operator<<(std::ostream & o,Bureaucrat const & rhs);
+
+#endif

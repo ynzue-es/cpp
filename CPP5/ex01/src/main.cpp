@@ -6,11 +6,11 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 15:44:40 by yannis            #+#    #+#             */
-/*   Updated: 2025/09/12 11:41:04 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/16 01:36:54 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "../includes/Bureaucrat.hpp"
 #include <string>
 #include <iostream>
 
@@ -54,7 +54,7 @@ int main() {
     std::cout << std::endl;
 
     
-    std::cout << "=== Cas invalides (constructeur) ===" << std::endl;
+    std::cout << "=== Cas invalides ===" << std::endl;
     {
         std::cout << "[TEST] Création avec grade 0" << std::endl;
         try {

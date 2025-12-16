@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:19:12 by ynzue-es          #+#    #+#             */
-/*   Updated: 2025/12/15 13:57:18 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/12/16 01:38:33 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FORM_HPP
+#define FORM_HPP
 
 #include "../includes/Bureaucrat.hpp"
 #include <string>
@@ -28,12 +31,12 @@ class Form
         Form & operator=(Form const & rhs);
         ~Form();
 
-        std::string const getName() const;
-        bool const getIsSigned() const;
-        int const getSignGrade() const;
-        int const getExecuteGrade() const;
+        std::string const & getName() const;
+        bool getIsSigned() const;
+        int getSignGrade() const;
+        int getExecuteGrade() const;
 
-        bool beSigned(Bureaucrat const & bureaucrat);
+        void beSigned(Bureaucrat const & bureaucrat);
 
     class GradeTooHighException : public std::exception
     {
@@ -48,3 +51,5 @@ class Form
 };
 
 std::ostream & operator<<(std::ostream & o,Form const & rhs);
+
+#endif

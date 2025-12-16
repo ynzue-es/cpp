@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:17:10 by ynzue-es          #+#    #+#             */
-/*   Updated: 2025/12/15 14:00:20 by ynzue-es         ###   ########.fr       */
+/*   Updated: 2025/12/16 01:39:00 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,41 +42,38 @@ Form::Form(Form const & src)
 
 Form & Form::operator=(Form const & rhs) {
     if (this != &rhs)
-        *this = rhs;
+        this->_isSigned = rhs._isSigned;
     return *this;
 }
 
 Form::~Form() {}
 
-std::string const Form::getName() const {
-    std::cout << this->_name << std::endl;
+std::string const & Form::getName() const {
+    return this->_name;
 }
 
-bool const Form::getIsSigned() const {
-    std::cout << this->_isSigned << std::endl;
+bool Form::getIsSigned() const {
+    return this->_isSigned;
 }
 
-int const Form::getSignGrade() const {
-    std::cout << this->_signGrade << std::endl;
+int Form::getSignGrade() const {
+    return this->_signGrade;
 }
 
-int const Form::getExecuteGrade() const {
-    std::cout << this->_executeGrade << std::endl;
+int Form::getExecuteGrade() const {
+    return this->_executeGrade;
 }
 
-bool Form::beSigned(Bureaucrat const & bureaucrat) {
-    if (bureaucrat.getGrade() > this->_signGrade) {
+void Form::beSigned(Bureaucrat const & bureaucrat) {
+    if (bureaucrat.getGrade() > this->_signGrade)
         throw Form::GradeTooLowException();
-        return false;
-    }
-    return true;
+    this->_isSigned = true;
 }
 
-std::ostream & operator<<(std::ostream & o,Form const & rhs) {
-    o << "Form informations : "
-      << rhs.getName() 
-      << rhs.getIsSigned()
-      << rhs.getSignGrade() 
-      << rhs.getExecuteGrade();
-    return (o);
+std::ostream & operator<<(std::ostream & o, Form const & rhs) {
+    o << "Form \"" << rhs.getName() << "\""
+      << ", signed: " << (rhs.getIsSigned() ? "yes" : "no")
+      << ", sign grade: " << rhs.getSignGrade()
+      << ", execute grade: " << rhs.getExecuteGrade();
+    return o;
 }
