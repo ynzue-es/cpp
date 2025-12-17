@@ -5,71 +5,81 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 15:44:40 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/16 01:36:54 by yannis           ###   ########.fr       */
+/*   Created: 2025/12/16 01:51:03 by yannis            #+#    #+#             */
+/*   Updated: 2025/12/16 02:07:36 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
-#include <string>
+#include "../includes/Form.hpp"
 #include <iostream>
 
 int main() {
-    std::cout << "=== Cas normaux ===" << std::endl;
-    {
-        std::cout << "[TEST] Bernard, grade 10 -> increment 5 fois" << std::endl;
-        Bureaucrat b1("Bernard", 10);
-        for (int i = 0; i < 5; i++) b1.incrementGrade();
-        std::cout << "[OK] " << b1 << std::endl;
 
-        for (int i = 0; i < 5; i++) b1.decrementGrade();
-        std::cout << "[OK] " << b1 << std::endl;
-        std::cout << "[TEST] Bernard -> decrement 5 fois" << std::endl;
+    std::cout << "=== Normal cases ===" << std::endl;
+    {
+        std::cout << "[TEST] Create Bureaucrat and valid Form" << std::endl;
+        Bureaucrat bob("Bob", 10);
+        Form formA("FormA", 20, 30);
+
+        std::cout << "[INFO] " << bob << std::endl;
+        std::cout << "[INFO] " << formA << std::endl;
+
+        std::cout << "[TEST] Bob signs FormA" << std::endl;
+        bob.signForm(formA);
+        std::cout << "[OK] " << formA << std::endl;
     }
     std::cout << std::endl;
 
-    
-    std::cout << "=== Cas limites ===" << std::endl;
+    std::cout << "=== Edge cases ===" << std::endl;
     {
-        std::cout << "[TEST] Michel, grade 1 -> increment (doit throw)" << std::endl;
-        Bureaucrat b2("Michel", 1);
-        try {
-            b2.incrementGrade();
-            std::cout << "[FAIL] pas d'exception levée" << std::endl;
-        } catch (const Bureaucrat::GradeTooHighException& e) {
-            std::cerr << "[OK] Exception attrapée: " << e.what() << std::endl;
-        }
-        std::cout << b2 << std::endl;
+        std::cout << "[TEST] Bureaucrat at signing limit" << std::endl;
+        Bureaucrat alice("Alice", 50);
+        Form formB("FormB", 50, 10);
 
-        std::cout << "[TEST] Arnaud, grade 150 -> decrement (doit throw)" << std::endl;
-        Bureaucrat b3("Arnaud", 150);
-        try {
-            b3.decrementGrade();
-            std::cout << "[FAIL] pas d'exception levée" << std::endl;
-        } catch (const Bureaucrat::GradeTooLowException& e) {
-            std::cerr << "[OK] Exception attrapée: " << e.what() << std::endl;
-        }
-        std::cout << b3 << std::endl;
+        std::cout << "[INFO] " << alice << std::endl;
+        std::cout << "[INFO] " << formB << std::endl;
+
+        std::cout << "[TEST] Alice signs FormB (exact grade)" << std::endl;
+        alice.signForm(formB);
+        std::cout << "[OK] " << formB << std::endl;
     }
     std::cout << std::endl;
 
-    
-    std::cout << "=== Cas invalides ===" << std::endl;
+    std::cout << "=== Failure cases ===" << std::endl;
     {
-        std::cout << "[TEST] Création avec grade 0" << std::endl;
+        std::cout << "[TEST] Bureaucrat grade too low to sign" << std::endl;
+        Bureaucrat tom("Tom", 100);
+        Form formC("FormC", 50, 10);
+
+        std::cout << "[INFO] " << tom << std::endl;
+        std::cout << "[INFO] " << formC << std::endl;
+
+        tom.signForm(formC);
+        std::cout << "[INFO] " << formC << std::endl;
+    }
+    std::cout << std::endl;
+
+    std::cout << "=== Invalid cases ===" << std::endl;
+    {
+        std::cout << "[TEST] Create Form with grade too high" << std::endl;
         try {
-            Bureaucrat b4("Jacques", 0);
-            std::cout << "[FAIL] pas d'exception levée" << std::endl;
-        } catch (const Bureaucrat::GradeTooHighException& e) {
-            std::cerr << "[OK] Exception attrapée: " << e.what() << std::endl;
+            Form badForm1("BadForm1", 0, 10);
+            std::cout << "[FAIL] No exception thrown" << std::endl;
+        }
+        catch (const Form::GradeTooHighException & e) {
+            std::cerr << "[OK] Exception caught: " << e.what() << std::endl;
         }
 
-        std::cout << "[TEST] Création avec grade 200" << std::endl;
+        std::cout << "[TEST] Create Form with grade too low" << std::endl;
         try {
-            Bureaucrat b5("Robert", 200);
-            std::cout << "[FAIL] pas d'exception levée" << std::endl;
-        } catch (const Bureaucrat::GradeTooLowException& e) {
-            std::cerr << "[OK] Exception attrapée: " << e.what() << std::endl;
+            Form badForm2("BadForm2", 10, 200);
+            std::cout << "[FAIL] No exception thrown" << std::endl;
+        }
+        catch (const Form::GradeTooLowException & e) {
+            std::cerr << "[OK] Exception caught: " << e.what() << std::endl;
         }
     }
+
+    return 0;
 }

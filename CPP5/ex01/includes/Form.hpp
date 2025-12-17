@@ -6,16 +6,17 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 11:19:12 by ynzue-es          #+#    #+#             */
-/*   Updated: 2025/12/16 01:38:33 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/16 01:53:16 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 
-#include "../includes/Bureaucrat.hpp"
 #include <string>
 #include <iostream>
+
+class Bureaucrat;
 
 class Form
 {

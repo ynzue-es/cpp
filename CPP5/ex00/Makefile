@@ -6,34 +6,39 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/10 15:37:23 by yannis            #+#    #+#              #
-#    Updated: 2025/09/12 11:35:13 by yannis           ###   ########.fr        #
+#    Updated: 2025/12/16 01:56:47 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = bureaucrat
-CPP = c++
-CPPFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD -MP
-SRC = src/main.cpp src/Bureaucrat.cpp
-OBJ = $(SRC:src/%.cpp=obj/%.o)
+
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
+OBJ_DIR = obj/
+INC_DIR = include/
+
+SRCS = 	src/Bureaucrat.cpp \
+		src/main.cpp
+OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
+DEPS = $(OBJS:.o=.d)
 
 all: $(NAME)
 
-$(NAME):$(OBJ)
-	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
+$(OBJ_DIR)%.o: %.cpp
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
 
-obj/%.o: src/%.cpp
-	mkdir -p obj
-	$(CPP) $(CPPFLAGS) -Iincludes -c $< -o $@
-
--include $(OBJ:.o=.d)
+$(NAME): $(OBJS) Makefile
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -f $(OBJ) $(OBJ:.o=.d)
-	rm -rf obj
-	
+	$(RM) -r $(OBJ_DIR)
+
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
-.PHONY: clean fclean re all
+-include $(DEPS)
+
+.PHONY: all clean fclean re
