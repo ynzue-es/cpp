@@ -6,7 +6,7 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/10 15:37:23 by yannis            #+#    #+#              #
-#    Updated: 2025/12/16 01:56:36 by yannis           ###   ########.fr        #
+#    Updated: 2025/12/18 00:44:12 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,12 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = include/
 
-SRCS = 	src/Bureaucrat.cpp \
+SRCS = 	src/ShrubberyCreationForm.cpp \
+		src/RobotomyRequestForm.cpp \
+		src/PresidentialPardonForm.cpp \
+		src/Intern.cpp \
+		src/AForm.cpp \
+		src/Bureaucrat.cpp \
 		src/Form.cpp \
 		src/main.cpp
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
