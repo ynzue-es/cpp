@@ -6,7 +6,7 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/10 15:37:23 by yannis            #+#    #+#              #
-#    Updated: 2025/12/16 01:56:47 by yannis           ###   ########.fr        #
+#    Updated: 2025/12/18 00:52:58 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = bureaucrat
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
-INC_DIR = include/
+INC_DIR = includes/
 
 SRCS = 	src/Bureaucrat.cpp \
 		src/main.cpp

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Form.hpp"
 #include "../includes/Bureaucrat.hpp"
+#include "../includes/AForm.hpp"
 #include <stdexcept>
 #include <iostream>
 
@@ -58,7 +58,7 @@ void Bureaucrat::decrementGrade() {
     _grade += 1;
 }
 
-void Bureaucrat::signForm(Form & form) {
+void Bureaucrat::signForm(AForm & form) {
     try {
         form.beSigned(*this);
         std::cout << this->_name << " signed " << form.getName() << std::endl;
@@ -67,6 +67,17 @@ void Bureaucrat::signForm(Form & form) {
         std::cout << this->_name << " couldn't sign "
                   << form.getName()
                   << " because " << e.what() << std::endl;
+    }
+}
+
+void Bureaucrat::executeForm(AForm const & form) const {
+    try {
+        form.execute(*this);
+        std::cout << this->_name << " executed " << form.getName() << std::endl;
+    }
+    catch (std::exception const & e) {
+        std::cout << this->_name << " couldn't execute "
+                  << form.getName() << " because " << e.what() << std::endl;
     }
 }
 

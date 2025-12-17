@@ -15,7 +15,7 @@ NAME = form
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
-INC_DIR = include/
+INC_DIR = includes/
 
 SRCS = 	src/ShrubberyCreationForm.cpp \
 		src/RobotomyRequestForm.cpp \

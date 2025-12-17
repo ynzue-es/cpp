@@ -11,20 +11,37 @@
 /* ************************************************************************** */
 
 #include "../includes/Intern.hpp"
+#include "../includes/ShrubberyCreationForm.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include <iostream>
 
 Intern::Intern() {}
 
-Intern::Intern(Intern const & src) {}
+Intern::Intern(Intern const & src) {
+    (void)src;
+}
 
 Intern & Intern::operator=(Intern const & rhs) {
-    if (this != &rhs) {
-        *this = rhs; 
-    }
+    (void)rhs;
     return *this;
 }
 
 Intern::~Intern() {}
 
 AForm* Intern::makeForm(std::string name, std::string target) {
-    std::cout << "Intern creates " << name << std::endl;
+    if (name == "shrubbery creation") {
+        std::cout << "Intern creates " << name << std::endl;
+        return new ShrubberyCreationForm(target);
+    }
+    if (name == "robotomy request") {
+        std::cout << "Intern creates " << name << std::endl;
+        return new RobotomyRequestForm(target);
+    }
+    if (name == "presidential pardon") {
+        std::cout << "Intern creates " << name << std::endl;
+        return new PresidentialPardonForm(target);
+    }
+    std::cout << "Intern can't create form \"" << name << "\"" << std::endl;
+    return NULL;
 }
