@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 00:36:20 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/18 00:36:28 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/18 09:44:03 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PresidentialPardonForm.hpp"
-#include "Bureaucrat.hpp"
+#include "../includes/PresidentialPardonForm.hpp"
+#include "../includes/Bureaucrat.hpp"
 #include <iostream>
 
 PresidentialPardonForm::PresidentialPardonForm(std::string const & target)

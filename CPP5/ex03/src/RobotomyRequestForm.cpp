@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 00:35:51 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/18 00:35:53 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/18 11:11:15 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RobotomyRequestForm.hpp"
-#include "Bureaucrat.hpp"
+#include "../includes/RobotomyRequestForm.hpp"
+#include "../includes/Bureaucrat.hpp"
 #include <cstdlib>
 #include <iostream>
 
