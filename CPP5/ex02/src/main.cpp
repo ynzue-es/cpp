@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 01:51:03 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/16 02:07:36 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/18 01:00:08 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@ int main() {
     std::cout << "[INFO] " << worker << std::endl;
 
     std::cout << "\n=== Signing phase ===" << std::endl;
-    worker.signForm(shrub);     // ok
-    worker.signForm(robot);     // should fail
-    boss.signForm(robot);       // ok
-    boss.signForm(pardon);      // ok
+    worker.signForm(shrub);
+    worker.signForm(robot);
+    boss.signForm(robot);
+    boss.signForm(pardon);
 
     std::cout << "\n=== Execution phase ===" << std::endl;
-    worker.executeForm(shrub);  // grade too low for execution
-    boss.executeForm(shrub);    // creates file
-    boss.executeForm(robot);    // 50% success
-    boss.executeForm(pardon);   // always succeed if signed
+    worker.executeForm(shrub);
+    boss.executeForm(shrub);
+    boss.executeForm(robot);
+    boss.executeForm(pardon);
 
     std::cout << "\n=== Not signed case ===" << std::endl;
     ShrubberyCreationForm unsignedForm("garden");
