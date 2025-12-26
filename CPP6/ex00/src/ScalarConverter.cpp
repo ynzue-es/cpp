@@ -6,7 +6,7 @@
 /*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 18:38:42 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/26 15:25:38 by yannis           ###   ########.fr       */
+/*   Updated: 2025/12/26 16:32:02 by yannis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,6 @@ ScalarConverter	&ScalarConverter::operator=(ScalarConverter const &src) {
 	return *this;
 }
 ScalarConverter::~ScalarConverter() {}
-
-enum e_type {
-    TYPE_CHAR,
-    TYPE_INT,
-    TYPE_FLOAT,
-    TYPE_DOUBLE,
-    TYPE_INVALID
-};
 
 int ScalarConverter::detectType(std::string const & str)
 {
