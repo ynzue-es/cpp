@@ -6,18 +6,18 @@
 #    By: yannis <yannis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/10 15:37:23 by yannis            #+#    #+#              #
-#    Updated: 2025/12/25 18:36:42 by yannis           ###   ########.fr        #
+#    Updated: 2025/12/26 14:11:01 by yannis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scalar
+NAME = convert
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
 OBJ_DIR = obj/
 INC_DIR = includes/
 
-SRCS = 	src/Bureaucrat.cpp \
+SRCS = 	src/ScalarConverter.cpp \
 		src/main.cpp
 OBJS = $(SRCS:%.cpp=$(OBJ_DIR)%.o)
 DEPS = $(OBJS:.o=.d)
