@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yannis <yannis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ynzue-es <ynzue-es@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 18:38:10 by yannis            #+#    #+#             */
-/*   Updated: 2025/12/26 19:24:44 by yannis           ###   ########.fr       */
+/*   Updated: 2026/01/07 09:04:27 by ynzue-es         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BASE_HPP
 #define BASE_HPP
 
-#include <cstdint>
+#include <stdint.h>
 #include <string>
 #include <cstdlib>
 #include <ctime>
